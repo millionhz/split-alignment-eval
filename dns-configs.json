@@ -1,0 +1,23 @@
+{
+    "egobiah.co.uk": {
+        "TXT": "v=spf1 ip4:<ip> -all",
+        "MX": "0 mail.egobiah.co.uk"
+    },
+    "default._domainkey.egobiah.co.uk": {
+        "TXT": "v=DKIM1; k=rsa; p=<key>"
+    },
+    "_dmarc.egobiah.co.uk": {
+        "TXT": "v=DMARC1; p=reject; pct=100; aspf=s; adkim=s;"
+    },
+    "notification.egobiah.co.uk": {
+        "TXT": "v=spf1 ip4:<ip> -all",
+        "MX": "0 mail.egobiah.co.uk"
+    },
+    "default._domainkey.notification.egobiah.co.uk": {
+        "TXT": "v=DKIM1; k=rsa; p=<key>"
+    },
+    "sub.egobiah.co.uk": {
+        "TXT": "v=spf1 ip4:<ip> -all",
+        "MX": "0 mail.egobiah.co.uk"
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "dmarc-passing": {
+        "apex": {
+            "from": "DMARC Passing Apex <sender@egobiah.co.uk>",
+            "mailfrom": "sender@egobiah.co.uk",
+            "dkim": {
+                "domain": "egobiah.co.uk",
+                "selector": "default",
+                "private_key": "./private.key"
+            },
+            "subject": "DMARC Passing from Apex Domain",
+            "body": "Dear Recipient,\n\nThis email is sent from apex and it passes DMARC.\n\nBest regards,\nResearch Team"
+        },
+        "subdomain": {
+            "from": "DMARC Passing Sub <sender@notification.egobiah.co.uk>",
+            "mailfrom": "sender@notification.egobiah.co.uk",
+            "dkim": {
+                "domain": "notification.egobiah.co.uk",
+                "selector": "default",
+                "private_key": "./private.key"
+            },
+            "subject": "DMARC Passing from Subdomain",
+            "body": "Dear Recipient,\n\nThis email is sent from subdomain and it passes DMARC.\n\nBest regards,\nResearch Team"
+        }
+    },
+    "dmarc-failing": {
+        "apex": {
+            "from": "DMARC Failing Apex <sender@paypal.com>",
+            "mailfrom": "sender@egobiah.co.uk",
+            "dkim": false,
+            "subject": "DMARC Failing from Apex Domain",
+            "body": "Dear Recipient,\n\nThis email is sent from apex and it fails DMARC.\n\nBest regards,\nResearch Team"
+        },
+        "subdomain": {
+            "from": "DMARC Failing Sub <sender@notification.paypal.com>",
+            "mailfrom": "sender@notification.egobiah.co.uk",
+            "dkim": false,
+            "subject": "DMARC Failing from Subdomain",
+            "body": "Dear Recipient,\n\nThis email is sent from subdomain and it fails DMARC.\n\nBest regards,\nResearch Team"
+        }
+    },
+    "split-alignment-deliverability": {
+        "apex": {
+            "from": "Split Alignment Apex <sender@egobiah.co.uk>",
+            "mailfrom": "sender@sub.egobiah.co.uk",
+            "dkim": {
+                "domain": "egobiah.co.uk",
+                "selector": "default",
+                "private_key": "./private.key"
+            },
+            "subject": "Split Alignment from Apex Domain",
+            "body": "Dear Recipient,\n\nThis email is sent from apex using split alignment.\n\nBest regards,\nResearch Team"
+        },
+        "subdomain": {
+            "from": "Split Alignment Sub <sender@notification.egobiah.co.uk>",
+            "mailfrom": "sender@sub.egobiah.co.uk",
+            "dkim": {
+                "domain": "notification.egobiah.co.uk",
+                "selector": "default",
+                "private_key": "./private.key"
+            },
+            "subject": "Split Alignment from Subdomain",
+            "body": "Dear Recipient,\n\nThis email is sent from subdomain using split alignment.\n\nBest regards,\nResearch Team"
+        }
+    },
+    "split-alignment-security": {
+        "apex": {
+            "from": "Split Alignment Failure Apex <sender@egobiah.co.uk>",
+            "mailfrom": "sender@sub.egobiah.co.uk",
+            "dkim": false,
+            "subject": "Split Alignment Failure from Apex Domain",
+            "body": "Dear Recipient,\n\nThis email is sent from apex using split alignment and is expected to fail DMARC.\n\nBest regards,\nResearch Team"
+        },
+        "subdomain": {
+            "from": "Split Alignment Failure Sub <sender@notification.egobiah.co.uk>",
+            "mailfrom": "sender@sub.egobiah.co.uk",
+            "dkim": false,
+            "subject": "Split Alignment Failure from Subdomain",
+            "body": "Dear Recipient,\n\nThis email is sent from subdomain using split alignment and is expected to fail DMARC.\n\nBest regards,\nResearch Team"
+        }
+    }
+}
