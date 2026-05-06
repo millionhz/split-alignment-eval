@@ -22,7 +22,7 @@ openssl rsa -in private.key -pubout -out public.key
   booktitle = {Proceedings of the 2026 ACM Internet Measurement Conference},
   series    = {IMC '26},
   address   = {Karlsruhe, Germany},
-  year      = {2026}
+  year      = {2026},
   publisher = {ACM},
   doi       = {10.1145/3777912.3809146}
 }
