@@ -20,7 +20,6 @@ openssl rsa -in private.key -pubout -out public.key
   author    = {Muhammad Hamza and Mattijs Jonker and Raffaele Sommese and Simon Fernandez and Olivier Hureau and Eric Pauley and Taejoong Chung},
   title     = {{Split Alignment: Diffusing SPF Vulnerabilities With DMARC}},
   booktitle = {Proceedings of the 2026 ACM Internet Measurement Conference},
-  series    = {IMC '26},
   address   = {Karlsruhe, Germany},
   year      = {2026},
   publisher = {ACM},
